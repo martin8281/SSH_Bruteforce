@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" width="100%" alt="SSH Auth Assessment Tool" />
+<img src="banner.svg" width="100%" alt="SSH Auth Assessment Tool" />
 
 <br/>
 
@@ -12,7 +12,7 @@
 
 </div>
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## 👋 Overview
 
@@ -20,13 +20,13 @@
 
 > ⚠️ **For authorized security testing and educational use only.** Run it only against hosts you own or have written permission to test. Unauthorized access to computer systems is illegal.
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## 🖥️ Preview
 
 <div align="center">
 
-<img src="assets/preview.png" width="100%" alt="New Scan dashboard" />
+<img src="preview.png" width="100%" alt="New Scan dashboard" />
 
 </div>
 
@@ -34,17 +34,17 @@
 
 <div align="center">
 
-<img src="assets/features.svg" width="100%" alt="Features" />
+<img src="features.svg" width="100%" alt="Features" />
 
 </div>
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## 🔄 How It Works
 
 <div align="center">
 
-<img src="assets/flow.svg" width="100%" alt="Login, new scan, Celery task, try credentials, live output, JSON report" />
+<img src="flow.svg" width="100%" alt="Login, new scan, Celery task, try credentials, live output, JSON report" />
 
 </div>
 
@@ -66,7 +66,7 @@ flowchart LR
 4. Every successful login is pushed to the browser instantly through a **Django Channels** WebSocket.
 5. When the scan finishes, the results are saved as a timestamped JSON report under `app/output/`, named after the target host.
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## 🛠️ Tech Stack
 
@@ -79,7 +79,7 @@ flowchart LR
 | 🖼️ **Dashboard** | Bootstrap, Chart.js, ApexCharts |
 | 🗄️ **Database** | SQLite |
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## ⚙️ Getting Started
 
@@ -113,7 +113,7 @@ python manage.py runserver
 
 Then open `http://127.0.0.1:8000` in your browser, register an account, and sign in.
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## 🕹️ Usage
 
@@ -122,7 +122,7 @@ Then open `http://127.0.0.1:8000` in your browser, register an account, and sign
 3. Start the scan. Successful logins appear in the live output as they are found.
 4. Check **History** to browse past scans and their saved JSON reports.
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## 📁 Project Structure
 
@@ -145,10 +145,10 @@ Project/
 ├── templates/                  # Dashboard, login, register, scan, history
 ├── static/                     # CSS, JS, chart and icon libraries
 ├── requirements.txt
-└── assets/                     # README images
+└──                      # README images
 ```
 
-<img src="assets/divider.svg" width="100%" alt="" />
+<img src="divider.svg" width="100%" alt="" />
 
 ## ⚠️ Disclaimer
 
