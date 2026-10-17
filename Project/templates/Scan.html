@@ -1,0 +1,106 @@
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Dashboard</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/Dashboard">Home</a></li>
+          <li class="breadcrumb-item active">Scan</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">New Scan</h5>
+
+              <!-- General Form Elements -->
+              <form >
+                {% csrf_token %}
+                <!-- <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Scan Name</label>
+                  <div class="col-sm-10">
+                    <input name="scan_name" placeholder="example" id="scan_name" type="text" class="form-control scan_name" required>
+                  </div>
+                </div> -->
+
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Host Name</label>
+                  <div class="col-sm-10">
+                    <input name="host_name" placeholder="localhost" id="host_name" type="text" class="form-control host" required>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="inputText" class="col-sm-2 col-form-label">Port</label>
+                  <div class="col-sm-10">
+                    <input name="host_name" placeholder="22" id="host_name" type="text" class="form-control port" required>
+                  </div>
+                </div>
+                
+           
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">User List</label>
+                  <div class="col-sm-10">
+                    <input id="word_list" placeholder="/wordlist.txt" name="word_list" class="form-control user" type="text" id="formFile">
+                  </div>
+                </div>
+                  
+                <div class="row mb-3">
+                  <label for="inputNumber" class="col-sm-2 col-form-label">Password List</label>
+                  <div class="col-sm-10">
+                    <input id="word_list" placeholder="/wordlist.txt" name="word_list" class="form-control passw" type="text" id="formFile">
+                  </div>
+                </div>
+
+           
+           
+    
+               
+              
+    
+                <div class="progress mt-3 stoped">
+                  <div class="progress-bar progress-bar-striped bg-warning " role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <div class="progress mt-3 running" style="display:none">
+                  <div class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+  
+                <br>
+                <div class="row mb-3">
+                  <label class="col-sm-2 col-form-label">Start Scan</label>
+                  <div class="col-sm-10">
+                    <button type="button" onclick="scan()" class="btn btn-primary start_scan">Start Scan</button>
+                    <button style="display:none" type="button"  class="btn btn-danger stop_scan">Stop Scan</button>
+                  </div>
+                </div>
+
+              </form><!-- End General Form Elements -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          
+
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Result</h5>
+              <div class="result">
+  
+            
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+</main>

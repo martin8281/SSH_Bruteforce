@@ -1,0 +1,29 @@
+# Virtual Environments
+venv/
+env/
+Project/env/
+.env
+
+# Python byte-code and cache
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Django database & local output
+*.sqlite3
+db.sqlite3
+Project/db.sqlite3
+Project/app/output/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# VS Code / IDE
+.vscode/
+.DS_Store
+Thumbs.db

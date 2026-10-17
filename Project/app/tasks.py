@@ -1,0 +1,54 @@
+from celery import shared_task
+import requests
+import json
+from django.http import JsonResponse
+from .helper import *
+
+from asgiref.sync import async_to_sync
+from channels.layers import get_channel_layer
+import os
+from datetime import datetime
+
+
+
+channel_layer = get_channel_layer()
+ 
+@shared_task
+def crack(host, user, passw,port):
+    clear_data()
+    output = check(host, user, passw,port)
+    current_date = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    data = {
+        "scan_setting": {
+            "date": current_date,
+            "host": host,
+            "user list": user,
+            "passeord list": passw,
+          
+        },
+        "result": output
+    }
+
+    # Get the base directory of the project where manage.py exists
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    # Create the output folder path within the project folder
+    output_folder_path = os.path.join(base_dir, 'output')
+    # Create the output folder if it doesn't exist
+    os.makedirs(output_folder_path, exist_ok=True)
+    # File path and name inside the output folder
+    file_path = os.path.join(output_folder_path, host + '.json')
+    # Check if the file name already exists and avoid overwriting
+    if os.path.exists(file_path):
+        # If the file name already exists, modify the name
+        index = 1
+        while os.path.exists(file_path):
+            # Append a number to the file name to make it unique
+            file_path = os.path.join(output_folder_path, f"{host}_{index}.json")
+            index += 1
+
+    # Open the file in write mode, and create it if it doesn't exist
+    with open(file_path, 'w') as file:
+        # Write the data as JSON to the file
+        json.dump(data, file)
+    
+
