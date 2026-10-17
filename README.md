@@ -22,6 +22,14 @@
 
 <img src="assets/divider.svg" width="100%" alt="" />
 
+## 🖥️ Preview
+
+<div align="center">
+
+<img src="assets/preview.png" width="100%" alt="New Scan dashboard" />
+
+</div>
+
 ## ✨ Features
 
 <div align="center">
